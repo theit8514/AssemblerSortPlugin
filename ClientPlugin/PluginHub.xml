@@ -4,7 +4,7 @@
   <GroupId>theit8514/AssemblerSortPlugin</GroupId>
   <FriendlyName>Assembler Sorting</FriendlyName>
   <Author>theit8514</Author>
-  <Commit>1f02f8b7dae6349705bab59cc6d3694c31506aee</Commit>
+  <Commit>c2a2b88cca755aa1eea41f2f39c06292f200e2fe</Commit>
   <SourceDirectories>
     <Directory>ClientPlugin</Directory>
   </SourceDirectories>
