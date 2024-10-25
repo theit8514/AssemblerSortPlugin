@@ -3,7 +3,6 @@ using Sandbox.Game.Entities;
 using Sandbox.Game.Entities.Cube;
 using Sandbox.Game.Localization;
 using Sandbox.Graphics.GUI;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -30,6 +29,9 @@ namespace ClientPlugin.Patches
             AssemblersByKeyFieldInfo = AccessTools.Field(AccessTools.TypeByName(ClassType), "m_assemblersByKey");
         }
 
+        // We want to patch this after BetterInventorySearch, as that just calls SortItemsByValueText
+        // ReSharper disable once StringLiteralTypo
+        [HarmonyAfter("avaness.BetterInventorySearch")]
         public static void Postfix(object __instance,
             IMyGuiControlsParent controlsParent,
             MyCubeGrid grid,
